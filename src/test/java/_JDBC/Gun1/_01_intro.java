@@ -42,6 +42,8 @@ public class _01_intro {
         System.out.println("firstName = " + firstName);
         System.out.println("lastName = " + lastName);
 
+        connection.close();
+
 
 
     }
