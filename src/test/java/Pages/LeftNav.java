@@ -1,13 +1,17 @@
 package Pages;
 
 import Utilities.GWD;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class LeftNav extends Parent{
 
     public LeftNav() {
+
         PageFactory.initElements(GWD.getDriver(), this);
     }
 
@@ -46,6 +50,8 @@ public class LeftNav extends Parent{
     @FindBy(xpath = "//span[text()='Employees']")
     private WebElement employees;
 
+    @FindBy(xpath = "//span[text()='States']")
+    private WebElement states;
 
 
     WebElement myElement;
@@ -64,6 +70,7 @@ public class LeftNav extends Parent{
             case "entranceExams2" : myElement =entranceExams2; break;
             case "humanResources" : myElement =humanResources; break;
             case "employees" : myElement =employees; break;
+            case "states" : myElement =states; break;
         }
 
         clickFunction(myElement);

@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suit 1">
+    <test name="Test 1">
+        <parameter name="sorgu" value="select * from actor"></parameter>
+        <classes>
+            <class name="_JDBC.Gun2._03_Odev1"></class>
+        </classes>
+    </test>
+</suite>
