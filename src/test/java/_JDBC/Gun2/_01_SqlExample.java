@@ -24,8 +24,8 @@ public class _01_SqlExample extends JDBCParent {
         System.out.println("idInt = " + idInt);
 
 
-        String name = rs.getString(2);
-        System.out.println("name = " + name);
+        String cityName = rs.getString(2);
+        System.out.println("name = " + cityName);
 
         //    int nameInt = rs.getInt(2);
         //    System.out.println("nameInt = " + nameInt);

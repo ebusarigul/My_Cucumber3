@@ -25,16 +25,18 @@ public class _04_Odev2 extends JDBCParent {
 
         //statement-query
         ResultSet rs = statement.executeQuery("select * from actor");
+        ResultSetMetaData rsmd = rs.getMetaData();
 
         //excel
         XSSFWorkbook workbook = new XSSFWorkbook();
         XSSFSheet sheet = workbook.createSheet("Actors Data");
 
         Row newRow = sheet.createRow(0);
-        newRow.createCell(0).setCellValue("actor_id");
-        newRow.createCell(1).setCellValue("first_name");
-        newRow.createCell(2).setCellValue("last_name");
-        newRow.createCell(3).setCellValue("last_update");
+        int columnCount=1;
+        for (int i = 0; i <4 ; i++) {
+            newRow.createCell(i).setCellValue(rsmd.getColumnName(columnCount));
+            columnCount++;
+        }
 
         int rowCount = 1;
         while (rs.next()){
@@ -45,12 +47,13 @@ public class _04_Odev2 extends JDBCParent {
             String last_update = rs.getString("last_update");
 
             newRow = sheet.createRow(rowCount);
-            rowCount++;
 
             newRow.createCell(0).setCellValue(actor_id);
             newRow.createCell(1).setCellValue(first_name);
             newRow.createCell(2).setCellValue(last_name);
             newRow.createCell(3).setCellValue(last_update);
+
+            rowCount++;
         }
 
         //excel write execute

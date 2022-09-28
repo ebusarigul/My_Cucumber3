@@ -30,9 +30,9 @@ public class _05_GetASpecificData {
     public static void main(String[] args){
 
         findInfo("password");
-        findInfo("address");
-        findInfo("username");
-        findInfo("zipcode");
+        //findInfo("address");
+        //findInfo("username");
+        //findInfo("zipcode");
 
     }
 

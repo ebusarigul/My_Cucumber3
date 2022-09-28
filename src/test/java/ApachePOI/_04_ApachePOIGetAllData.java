@@ -16,7 +16,6 @@ public class _04_ApachePOIGetAllData {
         Sheet sheet = workbook.getSheet("Sheet1");
 
         int rowCount = sheet.getPhysicalNumberOfRows();
-
         for (int i = 0; i < rowCount; i++) {
 
             Row row = sheet.getRow(i);

@@ -22,6 +22,7 @@ public class _03_Odev1 extends JDBCParent {
         ResultSetMetaData rsmd = rs.getMetaData();
 
         int columnCount = rsmd.getColumnCount();
+
         for (int i = 1; i <= columnCount; i++){
             String columnName = rsmd.getColumnName(i);
             System.out.printf("%-14s",columnName);

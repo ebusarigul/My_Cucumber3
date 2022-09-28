@@ -35,7 +35,6 @@ public class _02_GetAllRowColumn extends JDBCParent {
     public void test2() throws SQLException{
 
         // language tablosundaki tüm satırları ve tüm sütunları yazdırınız,
-        // aynı mysql sonuç ekranında olduğu gibi
 
         ResultSet rs = statement.executeQuery("select * from language");
 
@@ -97,8 +96,8 @@ public class _02_GetAllRowColumn extends JDBCParent {
 
     }
 
-    public void getTable(String s) throws SQLException {
-        ResultSet rs = statement.executeQuery(s);
+    public void getTable(String query) throws SQLException {
+        ResultSet rs = statement.executeQuery(query);
         ResultSetMetaData rsmd = rs.getMetaData();
 
         int columnCount = rsmd.getColumnCount();
